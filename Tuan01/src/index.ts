@@ -1,5 +1,5 @@
 function hello(name: string): string {
-  return `Hello, ${name}!`;
+    return `Hello, ${name}!`;
 }
 
 // console.log(hello("200Lab"));
@@ -14,7 +14,7 @@ class Person {
         this.age = age;
     }
 
-    public display():void{
+    public display(): void {
         console.log(`name: ${this.name}`)
         console.log(`age: ${this.age}`)
     }
@@ -34,7 +34,7 @@ class Student extends Person {
     }
 
 
-    public displayAll():void{
+    public displayAll(): void {
         console.log(`name: ${this.name}`)
         console.log(`age: ${this.age}`)
         console.log(`grade: ${this.grade}`)
@@ -56,7 +56,7 @@ class Car {
         this.year = year;
     }
 
-    public display(){
+    public display() {
         console.log(`brand: ${this.brand}`)
         console.log(`model: ${this.model}`)
         console.log(`year: ${this.year}`)
@@ -76,12 +76,12 @@ class Rectangle {
         this.height = height;
     }
 
-    public area():number{
+    public area(): number {
         return this.width * this.height;
     }
 
-    public perimeter():number{
-        return (this.width + this.height)*2
+    public perimeter(): number {
+        return (this.width + this.height) * 2
     }
 }
 
@@ -97,11 +97,11 @@ class BankAccount {
         this.balance = balance;
     }
 
-    public deposit(money: number):void{
+    public deposit(money: number): void {
         this.balance + money;
     }
 
-    public withdraw(money: number):void{
+    public withdraw(money: number): void {
         this.balance - money;
     }
 }
@@ -129,5 +129,24 @@ const book = new Book("Nha gia kim", "ABC", 1900)
 // console.log(book)
 
 //Bai07
+class User {
+    private name: string;
 
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    public getName(): string {
+        return this.name;
+    }
+
+    public setName(name: string): void {
+        this.name = name;
+    }
+}
+
+const user = new User("Nguyen Van A")
+console.log(user.getName())
+user.setName("Tran Thi B")
+console.log(user.getName())
 
