@@ -14,7 +14,7 @@ class Person {
         this.age = age;
     }
 
-    public display(){
+    public display():void{
         console.log(`name: ${this.name}`)
         console.log(`age: ${this.age}`)
     }
@@ -34,7 +34,7 @@ class Student extends Person {
     }
 
 
-    public displayAll(){
+    public displayAll():void{
         console.log(`name: ${this.name}`)
         console.log(`age: ${this.age}`)
         console.log(`grade: ${this.grade}`)
@@ -64,7 +64,7 @@ class Car {
 }
 
 const car = new Car("Honda", "New", 2025);
-car.display()
+// car.display()
 
 //Bai04
 class Rectangle {
@@ -76,16 +76,40 @@ class Rectangle {
         this.height = height;
     }
 
-    public area(){
+    public area():number{
         return this.width * this.height;
     }
 
-    public perimeter(){
+    public perimeter():number{
         return (this.width + this.height)*2
     }
 }
 
 const rectangle = new Rectangle(10, 20);
-console.log(rectangle.area())
-console.log(rectangle.perimeter())
+// console.log(rectangle.area())
+// console.log(rectangle.perimeter())
+
+//Bai05
+class BankAccount {
+    balance: number;
+
+    constructor(balance: number) {
+        this.balance = balance;
+    }
+
+    public deposit(money: number):void{
+        this.balance + money;
+    }
+
+    public withdraw(money: number):void{
+        this.balance - money;
+    }
+}
+const bankAccount = new BankAccount(500);
+bankAccount.deposit(100);
+console.log(bankAccount.balance)
+
+bankAccount.withdraw(200);
+console.log(bankAccount.balance)
+
 
