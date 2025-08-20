@@ -66,3 +66,26 @@ class Car {
 const car = new Car("Honda", "New", 2025);
 car.display()
 
+//Bai04
+class Rectangle {
+    width: number;
+    height: number;
+
+    constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public area(){
+        return this.width * this.height;
+    }
+
+    public perimeter(){
+        return (this.width + this.height)*2
+    }
+}
+
+const rectangle = new Rectangle(10, 20);
+console.log(rectangle.area())
+console.log(rectangle.perimeter())
+
