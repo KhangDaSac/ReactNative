@@ -2,7 +2,7 @@ function hello(name: string): string {
   return `Hello, ${name}!`;
 }
 
-console.log(hello("200Lab"));
+// console.log(hello("200Lab"));
 
 //Bai01
 class Person {
@@ -22,7 +22,7 @@ class Person {
 
 
 const person = new Person("Nguyen Van A", 30)
-person.display()
+// person.display()
 
 //Bai02
 class Student extends Person {
@@ -42,5 +42,27 @@ class Student extends Person {
 }
 
 const student = new Student("Nguyen Van B", 15, "A")
-student.displayAll()
+// student.displayAll()
+
+//Bai03
+class Car {
+    brand: string;
+    model: string;
+    year: number;
+
+    constructor(brand: string, model: string, year: number) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    public display(){
+        console.log(`brand: ${this.brand}`)
+        console.log(`model: ${this.model}`)
+        console.log(`year: ${this.year}`)
+    }
+}
+
+const car = new Car("Honda", "New", 2025);
+car.display()
 
