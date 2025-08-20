@@ -106,10 +106,28 @@ class BankAccount {
     }
 }
 const bankAccount = new BankAccount(500);
-bankAccount.deposit(100);
-console.log(bankAccount.balance)
+// bankAccount.deposit(100);
+// console.log(bankAccount.balance)
 
-bankAccount.withdraw(200);
-console.log(bankAccount.balance)
+// bankAccount.withdraw(200);
+// console.log(bankAccount.balance)
+
+//Bai06
+class Book {
+    title: string;
+    author: string;
+    year: number;
+
+    constructor(title: string, author: string, year: number) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+}
+
+const book = new Book("Nha gia kim", "ABC", 1900)
+// console.log(book)
+
+//Bai07
 
 
