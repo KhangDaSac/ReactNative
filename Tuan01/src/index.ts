@@ -27,6 +27,8 @@ import { Book } from './bai15/Book.ts';
 import { User } from './bai15/User.ts';
 import { Library } from './bai15/Library.ts';
 
+import { Box } from './bai16/Box.ts';
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -132,18 +134,36 @@ const book2 = new Book("1984", "George Orwell", 1949);
 library.addBook(book1);
 library.addBook(book2);
 
-// Tạo và thêm người dùng (tùy chọn, để minh họa)
-const user1 = new User("Alice");
-const user2 = new User("Bob");
-library.addUser(user1);
-library.addUser(user2);
+//Bai15
+// const user1 = new User("Alice");
+// const user2 = new User("Bob");
+// library.addUser(user1);
+// library.addUser(user2);
 
-console.log("Danh sách sách trong thư viện:");
-library.getBooks().forEach(book => {
-    console.log(book);
-});
+// console.log("Danh sách sách trong thư viện:");
+// library.getBooks().forEach(book => {
+//     console.log(book);
+// });
 
-console.log("\nDanh sách người dùng trong thư viện:");
-library.getUsers().forEach(user => {
-    console.log(user);
-});
+// console.log("\nDanh sách người dùng trong thư viện:");
+// library.getUsers().forEach(user => {
+//     console.log(user);
+// });
+
+//Bai16
+const numberBox = new Box<number>(42);
+const stringBox = new Box<string>("Hello, TypeScript!");
+const booleanBox = new Box<boolean>(true);
+
+console.log("Nội dung hộp số:", numberBox.getContent());
+console.log("Nội dung hộp chuỗi:", stringBox.getContent());
+console.log("Nội dung hộp boolean:", booleanBox.getContent());
+
+numberBox.setContent(100);
+stringBox.setContent("New content");
+booleanBox.setContent(false);
+
+console.log("\nNội dung sau khi thay đổi:");
+console.log("Nội dung hộp số:", numberBox.getContent());
+console.log("Nội dung hộp chuỗi:", stringBox.getContent());
+console.log("Nội dung hộp boolean:", booleanBox.getContent());
