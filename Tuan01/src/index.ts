@@ -38,7 +38,7 @@ import { Animal } from "./bai19/Animal.ts";
 // import { Cat } from "./bai19/Cat.ts";
 
 import { type Vehicle } from "./bai20/Vehicle.ts";
-import { Car } from "./bai20/Car.ts";
+// import { Car } from "./bai20/Car.ts";
 import { Bike } from "./bai20/Bike.ts";
 
 import { Repository } from "./bai21/Repository.ts";
@@ -61,6 +61,9 @@ import Teacher from "./bai27/Teacher.ts";
 
 import { Dog } from "./bai28/Dog.ts";
 import { Cat } from "./bai28/Cat.ts";
+
+import { Car } from "./bai29/Car.ts";
+import { Robot } from "./bai29/Robot.ts";
 
 
 // Bai01
@@ -304,8 +307,15 @@ import { Cat } from "./bai28/Cat.ts";
 
 //Bai28
 
-const dog = new Dog();
-const cat = new Cat();
+// const dog = new Dog();
+// const cat = new Cat();
 
-dog.bark();
-cat.meow();
+// dog.bark();
+// cat.meow();
+
+//Bai29
+const car = new Car();
+car.move();
+
+const robot = new Robot();
+robot.move();
