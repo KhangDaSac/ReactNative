@@ -52,6 +52,7 @@ import { CardPayment } from "./bai23/CardPayment.ts";
 import type { Appliance } from "./bai24/Appliance.ts";
 import { Fan } from "./bai24/Fan.ts";
 import { AirConditioner } from "./bai24/AirConditioner.ts";
+import { Shape } from "./bai25/Shape.ts";
 
 
 // Bai01
@@ -150,13 +151,13 @@ import { AirConditioner } from "./bai24/AirConditioner.ts";
 // console.log(developer.getDetails());
 // console.log(developer.writeCode());
 //Bai15
-const library = new Library();
+// const library = new Library();
 
-// Tạo và thêm sách
-const book1 = new Book("Nhà giả kim", "Paulo Coelho", 1988);
-const book2 = new Book("1984", "George Orwell", 1949);
-library.addBook(book1);
-library.addBook(book2);
+// // Tạo và thêm sách
+// const book1 = new Book("Nhà giả kim", "Paulo Coelho", 1988);
+// const book2 = new Book("1984", "George Orwell", 1949);
+// library.addBook(book1);
+// library.addBook(book2);
 
 //Bai15
 // const user1 = new User("Alice");
@@ -268,12 +269,15 @@ library.addBook(book2);
 // payments[1]?.pay(250);
 
 //Bai24
-const appliances: Appliance[] = [
-    new Fan(),
-    new AirConditioner()
-];
+// const appliances: Appliance[] = [
+//     new Fan(),
+//     new AirConditioner()
+// ];
 
-for (const appliance of appliances) {
-    appliance.turnOn();
-}
+// for (const appliance of appliances) {
+//     appliance.turnOn();
+// }
+
+//Bai25
+Shape.describe();
 
