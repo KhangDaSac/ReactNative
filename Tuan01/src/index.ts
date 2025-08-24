@@ -41,6 +41,8 @@ import { type Vehicle } from "./bai20/Vehicle.ts";
 import { Car } from "./bai20/Car.ts";
 import { Bike } from "./bai20/Bike.ts";
 
+import { Repository } from "./bai21/Repository.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -209,13 +211,27 @@ library.addBook(book2);
 // }
 
 //Bai20
-const vehicles: Vehicle[] = [
-    new Car(),
-    new Bike()
-];
+// const vehicles: Vehicle[] = [
+//     new Car(),
+//     new Bike()
+// ];
 
-for (const v of vehicles) {
-    v.start();
-    v.stop();
-}
+// for (const v of vehicles) {
+//     v.start();
+//     v.stop();
+// }
+
+//Bai21
+const stringRepo = new Repository<string>();
+stringRepo.add("Apple");
+stringRepo.add("Banana");
+
+console.log("String Repository:", stringRepo.getAll());
+
+// Tạo repository cho kiểu number
+const numberRepo = new Repository<number>();
+numberRepo.add(10);
+numberRepo.add(20);
+
+console.log("Number Repository:", numberRepo.getAll());
 
