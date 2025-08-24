@@ -7,9 +7,12 @@ import { Book } from './bai06/Book.ts';
 import { User } from './bai07/User.ts';
 import { Product } from './bai08/Product.ts';
 import { type Animal } from './bai09/Animal.ts';
-import { Cat } from './bai09/Cat.ts';
-import { Dog } from './bai09/Dog.ts';
+// import { Cat } from './bai09/Cat.ts';
+// import { Dog } from './bai09/Dog.ts';
 import { Account } from './bai10/Account.ts';
+
+import { Dog } from './bai11/Dog.ts';
+import { Cat } from './bai11/Cat.ts';
 
 
 // Bai01
@@ -74,5 +77,12 @@ const products: Product[] = [
 // });
 
 //Bai10
-const account = new Account("user123", "secret123", "ACC001");
-console.log(account)
+// const account = new Account("user123", "secret123", "ACC001");
+// console.log(account)
+
+const dog = new Dog("Buddy");
+const cat = new Cat("Whiskers");
+
+// Gọi các phương thức bark() và meow()
+console.log(dog.bark());
+console.log(cat.meow());
