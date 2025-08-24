@@ -6,13 +6,13 @@ import { BankAccount } from './bai05/BankAccount.ts';
 // import { Book } from './bai06/Book.ts';
 // import { User } from './bai07/User.ts';
 import { Product } from './bai08/Product.ts';
-import { type Animal } from './bai09/Animal.ts';
+// import { type Animal } from './bai09/Animal.ts';
 // import { Cat } from './bai09/Cat.ts';
 // import { Dog } from './bai09/Dog.ts';
 import { Account } from './bai10/Account.ts';
 
-import { Dog } from './bai11/Dog.ts';
-import { Cat } from './bai11/Cat.ts';
+// import { Dog } from './bai11/Dog.ts';
+// import { Cat } from './bai11/Cat.ts';
 
 import { Bird } from './bai12/Bird.ts';
 import { Fish } from './bai12/Fish.ts';
@@ -32,6 +32,10 @@ import { Box } from './bai16/Box.ts';
 import { Logger } from './bai17/Logger.ts';
 
 import { MathUtil } from "./bai18/MathUtil.ts";
+
+import { Animal } from "./bai19/Animal.ts";
+import { Dog } from "./bai19/Dog.ts";
+import { Cat } from "./bai19/Cat.ts";
 
 
 // Bai01
@@ -183,7 +187,19 @@ library.addBook(book2);
 // logger.log("Kiểm tra: instance này có giống với instance trước?");
 // console.log("Is same instance:", logger === anotherLogger);
 
+//Bai18
 console.log("Add:", MathUtil.add(10, 5));
 console.log("Subtract:", MathUtil.subtract(10, 5));
 console.log("Multiply:", MathUtil.multiply(10, 5));
 console.log("Divide:", MathUtil.divide(10, 5));
+
+//Bai19
+const animals: Animal[] = [
+    new Animal(),
+    new Dog(),
+    new Cat()
+];
+
+for (const animal of animals) {
+    animal.makeSound();
+}
