@@ -29,6 +29,8 @@ import { Library } from './bai15/Library.ts';
 
 import { Box } from './bai16/Box.ts';
 
+import { Logger } from './bai17/Logger.ts';
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -151,19 +153,30 @@ library.addBook(book2);
 // });
 
 //Bai16
-const numberBox = new Box<number>(42);
-const stringBox = new Box<string>("Hello, TypeScript!");
-const booleanBox = new Box<boolean>(true);
+// const numberBox = new Box<number>(42);
+// const stringBox = new Box<string>("Hello, TypeScript!");
+// const booleanBox = new Box<boolean>(true);
 
-console.log("Nội dung hộp số:", numberBox.getContent());
-console.log("Nội dung hộp chuỗi:", stringBox.getContent());
-console.log("Nội dung hộp boolean:", booleanBox.getContent());
+// console.log("Nội dung hộp số:", numberBox.getContent());
+// console.log("Nội dung hộp chuỗi:", stringBox.getContent());
+// console.log("Nội dung hộp boolean:", booleanBox.getContent());
 
-numberBox.setContent(100);
-stringBox.setContent("New content");
-booleanBox.setContent(false);
+// numberBox.setContent(100);
+// stringBox.setContent("New content");
+// booleanBox.setContent(false);
 
-console.log("\nNội dung sau khi thay đổi:");
-console.log("Nội dung hộp số:", numberBox.getContent());
-console.log("Nội dung hộp chuỗi:", stringBox.getContent());
-console.log("Nội dung hộp boolean:", booleanBox.getContent());
+// console.log("\nNội dung sau khi thay đổi:");
+// console.log("Nội dung hộp số:", numberBox.getContent());
+// console.log("Nội dung hộp chuỗi:", stringBox.getContent());
+// console.log("Nội dung hộp boolean:", booleanBox.getContent());
+
+//Bai17
+const logger = Logger.getInstance();
+
+logger.log("Khởi động ứng dụng");
+logger.log("Đang xử lý dữ liệu");
+logger.log("Hoàn thành tác vụ");
+
+const anotherLogger = Logger.getInstance();
+logger.log("Kiểm tra: instance này có giống với instance trước?");
+console.log("Is same instance:", logger === anotherLogger);
