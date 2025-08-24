@@ -20,6 +20,9 @@ import { Fish } from './bai12/Fish.ts';
 import { Square } from './bai13/Square.ts';
 import { Circle } from './bai13/Circle.ts';
 
+import { Manager } from './bai14/Manager.ts';
+import { Developer } from './bai14/Developer.ts';
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -102,8 +105,17 @@ const products: Product[] = [
 // console.log(fish.swim());
 
 //Bai13
-const square = new Square(5);
-const circle = new Circle(3);
+// const square = new Square(5);
+// const circle = new Circle(3);
 
-console.log(`Diện tích hình vuông: ${square.area()}`);
-console.log(`Diện tích hình tròn: ${circle.area()}`);
+// console.log(`Diện tích hình vuông: ${square.area()}`);
+// console.log(`Diện tích hình tròn: ${circle.area()}`);
+
+//Bai14
+const manager = new Manager("Alice", 80000, "HR");
+const developer = new Developer("Bob", 60000, "TypeScript");
+
+console.log(manager.getDetails());
+console.log(manager.manageTeam());
+console.log(developer.getDetails());
+console.log(developer.writeCode());
