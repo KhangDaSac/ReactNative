@@ -17,6 +17,9 @@ import { Cat } from './bai11/Cat.ts';
 import { Bird } from './bai12/Bird.ts';
 import { Fish } from './bai12/Fish.ts';
 
+import { Square } from './bai13/Square.ts';
+import { Circle } from './bai13/Circle.ts';
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -83,16 +86,24 @@ const products: Product[] = [
 // const account = new Account("user123", "secret123", "ACC001");
 // console.log(account)
 
+//Bai11
 // const dog = new Dog("Buddy");
 // const cat = new Cat("Whiskers");
 
 // console.log(dog.bark());
 // console.log(cat.meow());
 
-//Bai11
+//Bai12
 // Tạo các đối tượng Bird và Fish
-const bird = new Bird("Sparrow");
-const fish = new Fish("Goldfish");
+// const bird = new Bird("Sparrow");
+// const fish = new Fish("Goldfish");
 
-console.log(bird.fly());
-console.log(fish.swim());
+// console.log(bird.fly());
+// console.log(fish.swim());
+
+//Bai13
+const square = new Square(5);
+const circle = new Circle(3);
+
+console.log(`Diện tích hình vuông: ${square.area()}`);
+console.log(`Diện tích hình tròn: ${circle.area()}`);
