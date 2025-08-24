@@ -3,8 +3,8 @@ import { Student } from './bai02/Student.ts';
 import { Car } from './bai03/Car.ts';
 import { Rectangle } from './bai04/Rectangle.ts';
 import { BankAccount } from './bai05/BankAccount.ts';
-import { Book } from './bai06/Book.ts';
-import { User } from './bai07/User.ts';
+// import { Book } from './bai06/Book.ts';
+// import { User } from './bai07/User.ts';
 import { Product } from './bai08/Product.ts';
 import { type Animal } from './bai09/Animal.ts';
 // import { Cat } from './bai09/Cat.ts';
@@ -22,6 +22,10 @@ import { Circle } from './bai13/Circle.ts';
 
 import { Manager } from './bai14/Manager.ts';
 import { Developer } from './bai14/Developer.ts';
+
+import { Book } from './bai15/Book.ts';
+import { User } from './bai15/User.ts';
+import { Library } from './bai15/Library.ts';
 
 
 // Bai01
@@ -112,10 +116,34 @@ const products: Product[] = [
 // console.log(`Diện tích hình tròn: ${circle.area()}`);
 
 //Bai14
-const manager = new Manager("Alice", 80000, "HR");
-const developer = new Developer("Bob", 60000, "TypeScript");
+// const manager = new Manager("Alice", 80000, "HR");
+// const developer = new Developer("Bob", 60000, "TypeScript");
 
-console.log(manager.getDetails());
-console.log(manager.manageTeam());
-console.log(developer.getDetails());
-console.log(developer.writeCode());
+// console.log(manager.getDetails());
+// console.log(manager.manageTeam());
+// console.log(developer.getDetails());
+// console.log(developer.writeCode());
+//Bai15
+const library = new Library();
+
+// Tạo và thêm sách
+const book1 = new Book("Nhà giả kim", "Paulo Coelho", 1988);
+const book2 = new Book("1984", "George Orwell", 1949);
+library.addBook(book1);
+library.addBook(book2);
+
+// Tạo và thêm người dùng (tùy chọn, để minh họa)
+const user1 = new User("Alice");
+const user2 = new User("Bob");
+library.addUser(user1);
+library.addUser(user2);
+
+console.log("Danh sách sách trong thư viện:");
+library.getBooks().forEach(book => {
+    console.log(book);
+});
+
+console.log("\nDanh sách người dùng trong thư viện:");
+library.getUsers().forEach(user => {
+    console.log(user);
+});
