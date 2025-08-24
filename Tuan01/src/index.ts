@@ -1,5 +1,5 @@
 import { Person } from './bai01/Person.ts';
-import { Student } from './bai02/Student.ts';
+// import { Student } from './bai02/Student.ts';
 // import { Car } from './bai03/Car.ts';
 import { Rectangle } from './bai04/Rectangle.ts';
 import { BankAccount } from './bai05/BankAccount.ts';
@@ -57,13 +57,17 @@ import { Shape } from "./bai25/Shape.ts";
 import { Product } from "./bai26/Product.ts";
 import { Order } from "./bai26/Order.ts";
 
-import Teacher from "./bai27/Teacher.ts";
+// import Teacher from "./bai27/Teacher.ts";
 
 import { Dog } from "./bai28/Dog.ts";
 import { Cat } from "./bai28/Cat.ts";
 
 import { Car } from "./bai29/Car.ts";
 import { Robot } from "./bai29/Robot.ts";
+
+import { Student } from "./bai30/Student.ts";
+import { Teacher } from "./bai30/Teacher.ts";
+import { School } from "./bai30/School.ts";
 
 
 // Bai01
@@ -314,8 +318,23 @@ import { Robot } from "./bai29/Robot.ts";
 // cat.meow();
 
 //Bai29
-const car = new Car();
-car.move();
+// const car = new Car();
+// car.move();
 
-const robot = new Robot();
-robot.move();
+// const robot = new Robot();
+// robot.move();
+
+//Bai30
+const school = new School();
+
+const student1 = new Student(1, "Nguyen Van A", "10A1");
+const student2 = new Student(2, "Tran Thi B", "10A2");
+const teacher1 = new Teacher(1, "Le Van C", "Math");
+const teacher2 = new Teacher(2, "Pham Thi D", "Physics");
+
+school.addStudent(student1);
+school.addStudent(student2);
+school.addTeacher(teacher1);
+school.addTeacher(teacher2);
+
+school.displayInfo();
