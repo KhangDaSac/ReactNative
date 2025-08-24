@@ -1,11 +1,14 @@
-import { Person } from './Person.ts';
-import { Student } from './Student.ts';
-import { Car } from './Car.ts';
-import { Rectangle } from './Rectangle.ts';
-import { BankAccount } from './BankAccount.ts';
-import { Book } from './Book.ts';
-import { User } from './User.ts';
-import { Product } from './Product.ts';
+import { Person } from './bai01/Person.ts';
+import { Student } from './bai02/Student.ts';
+import { Car } from './bai03/Car.ts';
+import { Rectangle } from './bai04/Rectangle.ts';
+import { BankAccount } from './bai05/BankAccount.ts';
+import { Book } from './bai06/Book.ts';
+import { User } from './bai07/User.ts';
+import { Product } from './bai08/Product.ts';
+import { type Animal } from './bai09/Animal.ts';
+import { Cat } from './bai09/Cat.ts';
+import { Dog } from './bai09/Dog.ts';
 
 
 // Bai01
@@ -51,9 +54,20 @@ const products: Product[] = [
     new Product("Headphones", 150)
 ];
 
-// Lọc sản phẩm có giá > 100
-console.log("Sản phẩm có giá > 100:");
-const expensiveProducts = products.filter(product => product.price > 100);
-expensiveProducts.forEach(product => {
-    console.log(`Tên: ${product.name}, Giá: ${product.price}`);
+//Bai08
+// console.log("Sản phẩm có giá > 100:");
+// const expensiveProducts = products.filter(product => product.price > 100);
+// expensiveProducts.forEach(product => {
+//     console.log(`Tên: ${product.name}, Giá: ${product.price}`);
+// });
+
+//Bai09
+const animals: Animal[] = [
+    new Dog("Buddy"),
+    new Cat("Whiskers")
+];
+
+console.log("Âm thanh của các động vật:");
+animals.forEach(animal => {
+    console.log(`${animal.name} kêu: ${animal.sound()}`);
 });

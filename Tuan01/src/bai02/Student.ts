@@ -1,4 +1,4 @@
-import { Person } from './Person.ts'
+import { Person } from '../bai01/Person.ts'
 
 class Student extends Person {
     grade: string;
