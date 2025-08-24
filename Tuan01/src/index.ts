@@ -57,6 +57,8 @@ import { Shape } from "./bai25/Shape.ts";
 import { Product } from "./bai26/Product.ts";
 import { Order } from "./bai26/Order.ts";
 
+import Teacher from "./bai27/Teacher.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -285,12 +287,15 @@ import { Order } from "./bai26/Order.ts";
 // Shape.describe();
 
 //Bai26
-const order = new Order();
+// const order = new Order();
 
-// Thêm sản phẩm vào đơn hàng
-order.addProduct(new Product("Laptop", 1500));
-order.addProduct(new Product("Phone", 800));
-order.addProduct(new Product("Headphones", 200));
+// order.addProduct(new Product("Laptop", 1500));
+// order.addProduct(new Product("Phone", 800));
+// order.addProduct(new Product("Headphones", 200));
 
-console.log("Total Price:", order.calculateTotalPrice());
+// console.log("Total Price:", order.calculateTotalPrice());
+
+//Bai27
+const teacher = new Teacher("Nguyen Van A", 35, "Mathematics");
+console.log(teacher.introduce());
 
