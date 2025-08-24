@@ -49,6 +49,10 @@ import { type Payment } from "./bai23/Payment.ts";
 import { CashPayment } from "./bai23/CashPayment.ts";
 import { CardPayment } from "./bai23/CardPayment.ts";
 
+import type { Appliance } from "./bai24/Appliance.ts";
+import { Fan } from "./bai24/Fan.ts";
+import { AirConditioner } from "./bai24/AirConditioner.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -85,13 +89,13 @@ import { CardPayment } from "./bai23/CardPayment.ts";
 // console.log(user.getName());
 
 //Bai08
-const products: Product[] = [
-    new Product("Laptop", 1200),
-    new Product("Mouse", 25),
-    new Product("Keyboard", 80),
-    new Product("Monitor", 250),
-    new Product("Headphones", 150)
-];
+// const products: Product[] = [
+//     new Product("Laptop", 1200),
+//     new Product("Mouse", 25),
+//     new Product("Keyboard", 80),
+//     new Product("Monitor", 250),
+//     new Product("Headphones", 150)
+// ];
 
 //Bai08
 // console.log("Sản phẩm có giá > 100:");
@@ -255,11 +259,21 @@ library.addBook(book2);
 // console.log("Is empty?", stack.isEmpty());
 
 //Bai23
-const payments: Payment[] = [
-    new CashPayment(),
-    new CardPayment()
+// const payments: Payment[] = [
+//     new CashPayment(),
+//     new CardPayment()
+// ];
+
+// payments[0]?.pay(100);
+// payments[1]?.pay(250);
+
+//Bai24
+const appliances: Appliance[] = [
+    new Fan(),
+    new AirConditioner()
 ];
 
-payments[0]?.pay(100);
-payments[1]?.pay(250);
+for (const appliance of appliances) {
+    appliance.turnOn();
+}
 
