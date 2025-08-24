@@ -45,6 +45,10 @@ import { Repository } from "./bai21/Repository.ts";
 
 import { Stack } from "./bai22/Stack.ts";
 
+import { type Payment } from "./bai23/Payment.ts";
+import { CashPayment } from "./bai23/CashPayment.ts";
+import { CardPayment } from "./bai23/CardPayment.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -237,16 +241,25 @@ library.addBook(book2);
 // console.log("Number Repository:", numberRepo.getAll());
 
 //Bai22
-const stack = new Stack<number>();
+// const stack = new Stack<number>();
 
-console.log("Is empty?", stack.isEmpty());
+// console.log("Is empty?", stack.isEmpty());
 
-stack.push(10);
-stack.push(20);
-stack.push(30);
+// stack.push(10);
+// stack.push(20);
+// stack.push(30);
 
-console.log("Top element:", stack.peek());
-console.log("Popped element:", stack.pop());
-console.log("Top element after pop:", stack.peek());
-console.log("Is empty?", stack.isEmpty());
+// console.log("Top element:", stack.peek());
+// console.log("Popped element:", stack.pop());
+// console.log("Top element after pop:", stack.peek());
+// console.log("Is empty?", stack.isEmpty());
+
+//Bai23
+const payments: Payment[] = [
+    new CashPayment(),
+    new CardPayment()
+];
+
+payments[0]?.pay(100);
+payments[1]?.pay(250);
 
