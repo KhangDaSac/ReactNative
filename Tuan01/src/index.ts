@@ -34,8 +34,8 @@ import { Logger } from './bai17/Logger.ts';
 import { MathUtil } from "./bai18/MathUtil.ts";
 
 import { Animal } from "./bai19/Animal.ts";
-import { Dog } from "./bai19/Dog.ts";
-import { Cat } from "./bai19/Cat.ts";
+// import { Dog } from "./bai19/Dog.ts";
+// import { Cat } from "./bai19/Cat.ts";
 
 import { type Vehicle } from "./bai20/Vehicle.ts";
 import { Car } from "./bai20/Car.ts";
@@ -58,6 +58,9 @@ import { Product } from "./bai26/Product.ts";
 import { Order } from "./bai26/Order.ts";
 
 import Teacher from "./bai27/Teacher.ts";
+
+import { Dog } from "./bai28/Dog.ts";
+import { Cat } from "./bai28/Cat.ts";
 
 
 // Bai01
@@ -296,6 +299,13 @@ import Teacher from "./bai27/Teacher.ts";
 // console.log("Total Price:", order.calculateTotalPrice());
 
 //Bai27
-const teacher = new Teacher("Nguyen Van A", 35, "Mathematics");
-console.log(teacher.introduce());
+// const teacher = new Teacher("Nguyen Van A", 35, "Mathematics");
+// console.log(teacher.introduce());
 
+//Bai28
+
+const dog = new Dog();
+const cat = new Cat();
+
+dog.bark();
+cat.meow();
