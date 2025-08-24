@@ -1,152 +1,59 @@
-function hello(name: string): string {
-    return `Hello, ${name}!`;
-}
-
-// console.log(hello("200Lab"));
-
-//Bai01
-class Person {
-    name: string;
-    age: number;
-
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public display(): void {
-        console.log(`name: ${this.name}`)
-        console.log(`age: ${this.age}`)
-    }
-}
+import { Person } from './Person.ts';
+import { Student } from './Student.ts';
+import { Car } from './Car.ts';
+import { Rectangle } from './Rectangle.ts';
+import { BankAccount } from './BankAccount.ts';
+import { Book } from './Book.ts';
+import { User } from './User.ts';
+import { Product } from './Product.ts';
 
 
-const person = new Person("Nguyen Van A", 30)
-// person.display()
+// Bai01
+// const person = new Person("Nguyen Van A", 30);
+// person.display();
 
-//Bai02
-class Student extends Person {
-    grade: string;
+// Bai02
+// const student = new Student("Nguyen Van B", 15, "A");
+// student.displayAll();
 
-    constructor(name: string, age: number, grade: string) {
-        super(name, age);
-        this.grade = grade;
-    }
+// Bai03
+// const car = new Car("Honda", "New", 2025);
+// car.display();
 
+// Bai04
+// const rectangle = new Rectangle(10, 20);
+// console.log(`Rectangle Area: ${rectangle.area()}`);
+// console.log(`Rectangle Perimeter: ${rectangle.perimeter()}`);
 
-    public displayAll(): void {
-        console.log(`name: ${this.name}`)
-        console.log(`age: ${this.age}`)
-        console.log(`grade: ${this.grade}`)
-    }
-}
-
-const student = new Student("Nguyen Van B", 15, "A")
-// student.displayAll()
-
-//Bai03
-class Car {
-    brand: string;
-    model: string;
-    year: number;
-
-    constructor(brand: string, model: string, year: number) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-    }
-
-    public display() {
-        console.log(`brand: ${this.brand}`)
-        console.log(`model: ${this.model}`)
-        console.log(`year: ${this.year}`)
-    }
-}
-
-const car = new Car("Honda", "New", 2025);
-// car.display()
-
-//Bai04
-class Rectangle {
-    width: number;
-    height: number;
-
-    constructor(width: number, height: number) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public area(): number {
-        return this.width * this.height;
-    }
-
-    public perimeter(): number {
-        return (this.width + this.height) * 2
-    }
-}
-
-const rectangle = new Rectangle(10, 20);
-// console.log(rectangle.area())
-// console.log(rectangle.perimeter())
-
-//Bai05
-class BankAccount {
-    balance: number;
-
-    constructor(balance: number) {
-        this.balance = balance;
-    }
-
-    public deposit(money: number): void {
-        this.balance + money;
-    }
-
-    public withdraw(money: number): void {
-        this.balance - money;
-    }
-}
-const bankAccount = new BankAccount(500);
+// Bai05
+// const bankAccount = new BankAccount(500);
 // bankAccount.deposit(100);
-// console.log(bankAccount.balance)
-
+// console.log(`BankAccount Balance after deposit: ${bankAccount.balance}`);
 // bankAccount.withdraw(200);
-// console.log(bankAccount.balance)
+// console.log(`BankAccount Balance after withdrawal: ${bankAccount.balance}`);
 
-//Bai06
-class Book {
-    title: string;
-    author: string;
-    year: number;
+// Bai06
+// const book = new Book("Nha gia kim", "ABC", 1900);
+// console.log(book);
 
-    constructor(title: string, author: string, year: number) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-    }
-}
+// Bai07
+// const user = new User("Nguyen Van A");
+// console.log(user.getName());
+// user.setName("Tran Thi B");
+// console.log(user.getName());
 
-const book = new Book("Nha gia kim", "ABC", 1900)
-// console.log(book)
+//Bai08
+const products: Product[] = [
+    new Product("Laptop", 1200),
+    new Product("Mouse", 25),
+    new Product("Keyboard", 80),
+    new Product("Monitor", 250),
+    new Product("Headphones", 150)
+];
 
-//Bai07
-class User {
-    private name: string;
-
-    constructor(name: string) {
-        this.name = name;
-    }
-
-    public getName(): string {
-        return this.name;
-    }
-
-    public setName(name: string): void {
-        this.name = name;
-    }
-}
-
-const user = new User("Nguyen Van A")
-console.log(user.getName())
-user.setName("Tran Thi B")
-console.log(user.getName())
-
+// Lọc sản phẩm có giá > 100
+console.log("Sản phẩm có giá > 100:");
+const expensiveProducts = products.filter(product => product.price > 100);
+expensiveProducts.forEach(product => {
+    console.log(`Tên: ${product.name}, Giá: ${product.price}`);
+});
