@@ -9,6 +9,7 @@ import { Product } from './bai08/Product.ts';
 import { type Animal } from './bai09/Animal.ts';
 import { Cat } from './bai09/Cat.ts';
 import { Dog } from './bai09/Dog.ts';
+import { Account } from './bai10/Account.ts';
 
 
 // Bai01
@@ -62,12 +63,16 @@ const products: Product[] = [
 // });
 
 //Bai09
-const animals: Animal[] = [
-    new Dog("Buddy"),
-    new Cat("Whiskers")
-];
+// const animals: Animal[] = [
+//     new Dog("Buddy"),
+//     new Cat("Whiskers")
+// ];
 
-console.log("Âm thanh của các động vật:");
-animals.forEach(animal => {
-    console.log(`${animal.name} kêu: ${animal.sound()}`);
-});
+// console.log("Âm thanh của các động vật:");
+// animals.forEach(animal => {
+//     console.log(`${animal.name} kêu: ${animal.sound()}`);
+// });
+
+//Bai10
+const account = new Account("user123", "secret123", "ACC001");
+console.log(account)
