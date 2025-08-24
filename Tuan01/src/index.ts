@@ -1,6 +1,6 @@
 import { Person } from './bai01/Person.ts';
 import { Student } from './bai02/Student.ts';
-import { Car } from './bai03/Car.ts';
+// import { Car } from './bai03/Car.ts';
 import { Rectangle } from './bai04/Rectangle.ts';
 import { BankAccount } from './bai05/BankAccount.ts';
 // import { Book } from './bai06/Book.ts';
@@ -36,6 +36,10 @@ import { MathUtil } from "./bai18/MathUtil.ts";
 import { Animal } from "./bai19/Animal.ts";
 import { Dog } from "./bai19/Dog.ts";
 import { Cat } from "./bai19/Cat.ts";
+
+import { type Vehicle } from "./bai20/Vehicle.ts";
+import { Car } from "./bai20/Car.ts";
+import { Bike } from "./bai20/Bike.ts";
 
 
 // Bai01
@@ -188,18 +192,30 @@ library.addBook(book2);
 // console.log("Is same instance:", logger === anotherLogger);
 
 //Bai18
-console.log("Add:", MathUtil.add(10, 5));
-console.log("Subtract:", MathUtil.subtract(10, 5));
-console.log("Multiply:", MathUtil.multiply(10, 5));
-console.log("Divide:", MathUtil.divide(10, 5));
+// console.log("Add:", MathUtil.add(10, 5));
+// console.log("Subtract:", MathUtil.subtract(10, 5));
+// console.log("Multiply:", MathUtil.multiply(10, 5));
+// console.log("Divide:", MathUtil.divide(10, 5));
 
 //Bai19
-const animals: Animal[] = [
-    new Animal(),
-    new Dog(),
-    new Cat()
+// const animals: Animal[] = [
+//     new Animal(),
+//     new Dog(),
+//     new Cat()
+// ];
+
+// for (const animal of animals) {
+//     animal.makeSound();
+// }
+
+//Bai20
+const vehicles: Vehicle[] = [
+    new Car(),
+    new Bike()
 ];
 
-for (const animal of animals) {
-    animal.makeSound();
+for (const v of vehicles) {
+    v.start();
+    v.stop();
 }
+
