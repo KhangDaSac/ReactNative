@@ -14,6 +14,9 @@ import { Account } from './bai10/Account.ts';
 import { Dog } from './bai11/Dog.ts';
 import { Cat } from './bai11/Cat.ts';
 
+import { Bird } from './bai12/Bird.ts';
+import { Fish } from './bai12/Fish.ts';
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -80,9 +83,16 @@ const products: Product[] = [
 // const account = new Account("user123", "secret123", "ACC001");
 // console.log(account)
 
-const dog = new Dog("Buddy");
-const cat = new Cat("Whiskers");
+// const dog = new Dog("Buddy");
+// const cat = new Cat("Whiskers");
 
-// Gọi các phương thức bark() và meow()
-console.log(dog.bark());
-console.log(cat.meow());
+// console.log(dog.bark());
+// console.log(cat.meow());
+
+//Bai11
+// Tạo các đối tượng Bird và Fish
+const bird = new Bird("Sparrow");
+const fish = new Fish("Goldfish");
+
+console.log(bird.fly());
+console.log(fish.swim());
