@@ -31,6 +31,8 @@ import { Box } from './bai16/Box.ts';
 
 import { Logger } from './bai17/Logger.ts';
 
+import { MathUtil } from "./bai18/MathUtil.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -171,12 +173,17 @@ library.addBook(book2);
 // console.log("Nội dung hộp boolean:", booleanBox.getContent());
 
 //Bai17
-const logger = Logger.getInstance();
+// const logger = Logger.getInstance();
 
-logger.log("Khởi động ứng dụng");
-logger.log("Đang xử lý dữ liệu");
-logger.log("Hoàn thành tác vụ");
+// logger.log("Khởi động ứng dụng");
+// logger.log("Đang xử lý dữ liệu");
+// logger.log("Hoàn thành tác vụ");
 
-const anotherLogger = Logger.getInstance();
-logger.log("Kiểm tra: instance này có giống với instance trước?");
-console.log("Is same instance:", logger === anotherLogger);
+// const anotherLogger = Logger.getInstance();
+// logger.log("Kiểm tra: instance này có giống với instance trước?");
+// console.log("Is same instance:", logger === anotherLogger);
+
+console.log("Add:", MathUtil.add(10, 5));
+console.log("Subtract:", MathUtil.subtract(10, 5));
+console.log("Multiply:", MathUtil.multiply(10, 5));
+console.log("Divide:", MathUtil.divide(10, 5));
