@@ -5,7 +5,7 @@ import { Rectangle } from './bai04/Rectangle.ts';
 import { BankAccount } from './bai05/BankAccount.ts';
 // import { Book } from './bai06/Book.ts';
 // import { User } from './bai07/User.ts';
-import { Product } from './bai08/Product.ts';
+// import { Product } from './bai08/Product.ts';
 // import { type Animal } from './bai09/Animal.ts';
 // import { Cat } from './bai09/Cat.ts';
 // import { Dog } from './bai09/Dog.ts';
@@ -53,6 +53,9 @@ import type { Appliance } from "./bai24/Appliance.ts";
 import { Fan } from "./bai24/Fan.ts";
 import { AirConditioner } from "./bai24/AirConditioner.ts";
 import { Shape } from "./bai25/Shape.ts";
+
+import { Product } from "./bai26/Product.ts";
+import { Order } from "./bai26/Order.ts";
 
 
 // Bai01
@@ -279,5 +282,15 @@ import { Shape } from "./bai25/Shape.ts";
 // }
 
 //Bai25
-Shape.describe();
+// Shape.describe();
+
+//Bai26
+const order = new Order();
+
+// Thêm sản phẩm vào đơn hàng
+order.addProduct(new Product("Laptop", 1500));
+order.addProduct(new Product("Phone", 800));
+order.addProduct(new Product("Headphones", 200));
+
+console.log("Total Price:", order.calculateTotalPrice());
 
