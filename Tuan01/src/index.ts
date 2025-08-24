@@ -43,6 +43,8 @@ import { Bike } from "./bai20/Bike.ts";
 
 import { Repository } from "./bai21/Repository.ts";
 
+import { Stack } from "./bai22/Stack.ts";
+
 
 // Bai01
 // const person = new Person("Nguyen Van A", 30);
@@ -222,16 +224,29 @@ library.addBook(book2);
 // }
 
 //Bai21
-const stringRepo = new Repository<string>();
-stringRepo.add("Apple");
-stringRepo.add("Banana");
+// const stringRepo = new Repository<string>();
+// stringRepo.add("Apple");
+// stringRepo.add("Banana");
 
-console.log("String Repository:", stringRepo.getAll());
+// console.log("String Repository:", stringRepo.getAll());
 
-// Tạo repository cho kiểu number
-const numberRepo = new Repository<number>();
-numberRepo.add(10);
-numberRepo.add(20);
+// const numberRepo = new Repository<number>();
+// numberRepo.add(10);
+// numberRepo.add(20);
 
-console.log("Number Repository:", numberRepo.getAll());
+// console.log("Number Repository:", numberRepo.getAll());
+
+//Bai22
+const stack = new Stack<number>();
+
+console.log("Is empty?", stack.isEmpty());
+
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log("Top element:", stack.peek());
+console.log("Popped element:", stack.pop());
+console.log("Top element after pop:", stack.peek());
+console.log("Is empty?", stack.isEmpty());
 
