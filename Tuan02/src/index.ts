@@ -42,14 +42,26 @@
 // });
 
 //Bai04
-const myPromise: Promise<number> = new Promise((resolve, _) => {
-    resolve(Math.random());
-});
+// const myPromise: Promise<number> = new Promise((resolve, _) => {
+//     resolve(Math.random());
+// });
 
-myPromise
-    .then((value) => {
-        console.log('Random number is ' + value);
-    })
-    .catch((error) => {
-        console.error('Something error: ' + error);
+// myPromise
+//     .then((value) => {
+//         console.log('Random number is ' + value);
+//     })
+//     .catch((error) => {
+//         console.error('Something error: ' + error);
+//     });
+
+//Bai05
+const simulateTask = (time: number): Promise<string> => {
+    return new Promise((resolve, _) => {
+        setTimeout(() => {
+            resolve("Task done");
+        }, time);
     });
+}
+
+simulateTask(5000)
+    .then((value) => console.log(value));
