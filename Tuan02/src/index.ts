@@ -29,14 +29,27 @@
 //     });
 
 //Bai03
-function rejectWithError(): Promise<never> {
-  return new Promise((_, reject) => {
-    setTimeout(() => {
-      reject(new Error("Something went wrong"));
-    }, 1000);
-  });
-}
+// function rejectWithError(): Promise<never> {
+//   return new Promise((_, reject) => {
+//     setTimeout(() => {
+//       reject(new Error("Something went wrong"));
+//     }, 1000);
+//   });
+// }
 
-rejectWithError().catch((error) => {
-  console.error(error.message);
+// rejectWithError().catch((error) => {
+//   console.error(error.message);
+// });
+
+//Bai04
+const myPromise: Promise<number> = new Promise((resolve, _) => {
+    resolve(Math.random());
 });
+
+myPromise
+    .then((value) => {
+        console.log('Random number is ' + value);
+    })
+    .catch((error) => {
+        console.error('Something error: ' + error);
+    });
