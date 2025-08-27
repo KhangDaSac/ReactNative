@@ -14,16 +14,29 @@
 //     });
 
 //Bai02
-const myPromise: Promise<number> = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(10);
-    }, 1000);
-});
+// const myPromise: Promise<number> = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(10);
+//     }, 1000);
+// });
 
-myPromise
-    .then((value) => {
-        console.log('Promise resolved with value: ' + value);
-    })
-    .catch((error) => {
-        console.error('Promise rejected with error: ' + error);
-    });
+// myPromise
+//     .then((value) => {
+//         console.log('Promise resolved with value: ' + value);
+//     })
+//     .catch((error) => {
+//         console.error('Promise rejected with error: ' + error);
+//     });
+
+//Bai03
+function rejectWithError(): Promise<never> {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error("Something went wrong"));
+    }, 1000);
+  });
+}
+
+rejectWithError().catch((error) => {
+  console.error(error.message);
+});
