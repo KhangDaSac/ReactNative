@@ -136,15 +136,32 @@
 //   .catch(console.error);
 
 //Bai09
-const filterEvenNumbers = (arr: number[]): Promise<number[]> => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const evenNumbers = arr.filter(num => num % 2 === 0);
-            resolve(evenNumbers);
-        }, 1000);
-    });
-}
+// const filterEvenNumbers = (arr: number[]): Promise<number[]> => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             const evenNumbers = arr.filter(num => num % 2 === 0);
+//             resolve(evenNumbers);
+//         }, 1000);
+//     });
+// }
 
-filterEvenNumbers([1, 2, 3, 4, 5, 6])
-    .then(evenNums => console.log('Even numbers:', evenNums))
-    .catch(console.error);
+// filterEvenNumbers([1, 2, 3, 4, 5, 6])
+//     .then(evenNums => console.log('Even numbers:', evenNums))
+//     .catch(console.error);
+
+//Bai10
+const myPromise = new Promise<string>((resolve, reject) => {
+    setTimeout(() => {
+        const success = Math.random() > 0.5;
+        if (success) {
+            resolve("Success!");
+        } else {
+            reject("Failure!");
+        }
+    }, 1000);
+});
+
+myPromise
+    .then(result => console.log("Result:", result))
+    .catch(error => console.error("Error:", error))
+    .finally(() => console.log("Done"));
