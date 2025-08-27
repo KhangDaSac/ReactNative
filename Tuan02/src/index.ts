@@ -119,18 +119,32 @@
 //     .catch(err => console.error('Error:', err.message));
 
 //Bai08
-const square = (x: number): Promise<number> =>
-  Promise.resolve(x * x);
+// const square = (x: number): Promise<number> =>
+//   Promise.resolve(x * x);
 
-const double = (x: number): Promise<number> =>
-  Promise.resolve(x * 2);
+// const double = (x: number): Promise<number> =>
+//   Promise.resolve(x * 2);
 
-const addFive = (x: number): Promise<number> =>
-  Promise.resolve(x + 5);
+// const addFive = (x: number): Promise<number> =>
+//   Promise.resolve(x + 5);
 
-Promise.resolve(2)
-  .then(square)
-  .then(double)
-  .then(addFive)
-  .then(result => console.log(result)) 
-  .catch(console.error);
+// Promise.resolve(2)
+//   .then(square)
+//   .then(double)
+//   .then(addFive)
+//   .then(result => console.log(result)) 
+//   .catch(console.error);
+
+//Bai09
+const filterEvenNumbers = (arr: number[]): Promise<number[]> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const evenNumbers = arr.filter(num => num % 2 === 0);
+            resolve(evenNumbers);
+        }, 1000);
+    });
+}
+
+filterEvenNumbers([1, 2, 3, 4, 5, 6])
+    .then(evenNums => console.log('Even numbers:', evenNums))
+    .catch(console.error);
