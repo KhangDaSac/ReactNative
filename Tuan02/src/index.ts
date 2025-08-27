@@ -55,13 +55,37 @@
 //     });
 
 //Bai05
-const simulateTask = (time: number): Promise<string> => {
-    return new Promise((resolve, _) => {
+// const simulateTask = (time: number): Promise<string> => {
+//     return new Promise((resolve, _) => {
+//         setTimeout(() => {
+//             resolve("Task done");
+//         }, time);
+//     });
+// }
+
+// simulateTask(5000)
+//     .then((value) => console.log(value));
+
+//Bai06
+const simulateTask = (name: string, time: number): Promise<string> => {
+    return new Promise((reslove, _) => {
         setTimeout(() => {
-            resolve("Task done");
-        }, time);
-    });
+            reslove(`${name} done in ${time}s`)
+        }, time)
+    })
 }
 
-simulateTask(5000)
-    .then((value) => console.log(value));
+const runTasks = async () => {
+    const task = [
+        simulateTask("Task 1", 5000),
+        simulateTask("Task 2", 2000),
+        simulateTask("Task 3", 5000),
+        simulateTask("Task 4", 6000)
+    ]
+
+    const result = await Promise.all(task);
+
+    task.forEach((item) => console.log(item))
+}
+
+runTasks();
