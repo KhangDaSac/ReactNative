@@ -13,16 +13,14 @@ const subtractOne = async (num: number): Promise<number> => {
     return num - 1;
 }
 
+const myFunction = async () => {
+    let results = await Promise.all([
+        addTwo(10),
+        multiplyByThree(20),
+        subtractOne(30)
+    ]);
 
-const performCalculations = async () => {
-    let result = await addTwo(5);
-    console.log(result);
-
-    result = await multiplyByThree(result);
-    console.log(result);
-
-    result = await subtractOne(result);
-    console.log(result);
+    console.log(results);
 }
 
-performCalculations();
+myFunction();

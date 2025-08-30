@@ -12,12 +12,12 @@ const subtractOne = async (num) => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     return num - 1;
 };
-const performCalculations = async () => {
-    let result = await addTwo(5);
-    console.log(result);
-    result = await multiplyByThree(result);
-    console.log(result);
-    result = await subtractOne(result);
-    console.log(result);
+const myFunction = async () => {
+    let results = await Promise.all([
+        addTwo(10),
+        multiplyByThree(20),
+        subtractOne(30)
+    ]);
+    console.log(results);
 };
-performCalculations();
+myFunction();
